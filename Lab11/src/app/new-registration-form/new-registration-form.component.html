@@ -1,0 +1,55 @@
+<div>
+    <h3>{{mode}} Registration Form</h3>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+      <h4>Account Information</h4>
+      <mat-form-field >
+        <input matInput placeholder="username" id="username" [(ngModel)]=" username" name="username" >
+      </mat-form-field>
+    
+      <mat-form-field >
+        <input matInput placeholder="password" id="password" [(ngModel)]=" password" name="password" >
+      </mat-form-field>
+     <br>
+     
+     <h4>Personal Information</h4>
+    <mat-form-field>  
+    <input matInput placeholder="fname" id="fname" [(ngModel)]=" fname" name="fname" >
+  </mat-form-field>
+
+  <mat-form-field >
+    <input matInput placeholder="lname" id="lname" [(ngModel)]=" lname" name="lname" >
+  </mat-form-field>
+  <br>
+  
+  <h4>Mailing Details</h4>
+  <mat-form-field>
+    <input matInput placeholder="address" id="address" [(ngModel)]=" address" name="address" >
+  </mat-form-field>
+
+  <mat-form-field >
+    <input matInput placeholder="city" id="city" [(ngModel)]=" city" name="city" >
+  </mat-form-field>
+
+  <mat-form-field>  
+    <input matInput placeholder="state" id="state" [(ngModel)]=" state" name="state" >
+  </mat-form-field>
+
+  <mat-form-field >
+    <input matInput placeholder="zip" id="zip" [(ngModel)]=" zip" name="zip" >
+  </mat-form-field>
+  <br>
+  <h4>Contact Information</h4>
+  <mat-form-field>
+   <input matInput placeholder="email" id="email" [(ngModel)]=" email" name="email" >
+  </mat-form-field>
+
+  <mat-form-field >
+    <input matInput placeholder="phone" id="phone" [(ngModel)]=" phone" name="phone" >
+  </mat-form-field>
+         
+      <p>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+      </p>
+    </form>
+    </div>
+    

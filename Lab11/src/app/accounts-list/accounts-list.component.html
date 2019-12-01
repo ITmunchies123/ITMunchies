@@ -1,0 +1,10 @@
+<!-- Commented out Lines 49 - 53 LAB 11 -->
+<div>
+  <ul *ngFor ="let account of acccreation let i = index">
+    <li> {{account.id}}: {{account.username}} {{account.password}} {{account.fname}} {{account.lname}} {{account.address}} {{account.city}} {{account.state}} {{account.zip}} {{account.email}} {{account.phone}} (index {{i}})
+        <button mat-buttoncolor="warn"(click)="onDelete(account._id)">DELETE</button></li>
+        <button mat-button color="accent" [routerLink]="['/editAccount', account._id]">UPDATE</button>
+  </ul>
+</div>
+
+<!-- <div><app-new-registration-form></app-new-registration-form></div> -->

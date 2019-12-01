@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>IT Munchies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+
+<body>
+  Thanks for visiting our page and experiencing a new way to find EXCITING FOODS!
+   <br>
+   <br>
+   After you have created and account feel free to login and starting experiencing
+   a new way to find the food your pallette has been craving.
+   <br>
+   <br>
+
+   <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+   <mat-form-field >
+      <input matInput placeholder="username" id="username" [(ngModel)]=" username" name="username" >
+    </mat-form-field>
+  
+    <mat-form-field >
+      <input matInput placeholder="password" id="password" [(ngModel)]=" password" name="password" >
+    </mat-form-field>
+
+    <p>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
+      </p>
+</form>
+</body>
+
+</html>

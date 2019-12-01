@@ -1,0 +1,48 @@
+<style>
+    body {
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+  
+ .topnav {
+   overflow: hidden;
+   background-color: #333;
+ }
+  
+ .topnav a {
+   float: left;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+ }
+  
+ .topnav a:hover {
+   background-color: #ddd;
+   color: black;
+ }
+  
+ .topnav a.active {
+   background-color: #4CAF50;
+   color: white;
+ }
+     </style>
+
+<div class="topnav">
+<a class="active"href="">Home</a>
+<a href="/log-in">Fake Login Page</a>
+<a href="listAccounts">View account</a>
+<a href="/addAccounts">Create Account</a>
+<a href="#about">About</a>
+</div>
+
+<!--  The line below is for LAB 11-->
+<app-navigation-menu></app-navigation-menu> 
+
+<h1>
+  <p style="text-align:center">Welcome to {{ title }}!</p>
+</h1>
+
+<!-- Line 47 is LAB 11 -->
+<router-outlet></router-outlet>

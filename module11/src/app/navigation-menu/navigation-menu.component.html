@@ -1,0 +1,17 @@
+<!-- <p>navigation-menu works!</p> -->
+<div>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+      <span>Menu</span>
+    </button>
+    
+    <mat-menu #menu="matMenu"  >
+      <button mat-menu-item routerLink = "/listDrivers">
+        <span>List Drivers</span>
+      </button>
+      <button mat-menu-item routerLink = "/addDriver" >
+        <span>Add Driver </span>
+      </button>
+    </mat-menu>
+    </div>
+    

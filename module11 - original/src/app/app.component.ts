@@ -11,7 +11,7 @@ import { StudentService } from './student.service';
 })
 export class AppComponent implements OnInit {
   
-  title ='module10';
+  title ='Module 11 - Part 1 of Group 6 Project';
   //declare variable to hold response and make it public to be accessible from components.html
   public students;
   public drivers;

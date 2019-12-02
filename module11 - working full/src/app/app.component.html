@@ -1,0 +1,76 @@
+
+  <style>
+    body {
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+ }
+  
+ .topnav {
+   overflow: hidden;
+   background-color: #333;
+ }
+  
+ .topnav a {
+   float: left;
+   color: #f2f2f2;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+ }
+  
+ .topnav a:hover {
+   background-color: #ddd;
+   color: black;
+ }
+  
+ .topnav a.active {
+   background-color: #4CAF50;
+   color: white;
+ }
+     </style>
+
+<div class="topnav">
+  <a class="active" href="/">Account</a>
+  <a href="listDrivers/">Show Drivers</a>
+  <a href="addDriver">Driver Form</a>
+  <a href="#about">Other</a>
+</div>
+
+<app-navigation-menu></app-navigation-menu>
+<div>
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+</div>
+<!-- added this for step10-->
+<router-outlet></router-outlet>
+<!-- bullet points for student database (linked to atlas) -->
+<!-- <div>
+  <ul *ngFor ="let student of students let i = index">
+    <li> {{student._id}}: {{student.firstName}} {{student.lastName}} (index {{i}}) <button mat-button color="warn" (click)="onDelete(student._id)">DELETE</button></li>
+  </ul>
+</div> -->
+
+
+<!-- PROJECT - UNCOMMENT WHEN READY -->
+
+<!-- <div>
+  <ul *ngFor ="let d of drivers let i = index">
+    <li> {{d._id}}: {{d.firstName}} {{d.lastName}} {{d.nickname}} {{d.zip}} {{d.brand}} {{d.model}} {{d.color}} (index {{i}}) <button mat-button color="warn" (click)="onDelete(d._id)">DELETE</button></li>
+  </ul>
+</div> -->
+
+<!-- <div>
+  <app-new-student-form></app-new-student-form>
+</div>
+<br /><br /> -->
+
+
+<!-- PROJECT - UNCOMMENT WHEN READY -->
+ <!-- <hr><hr><h3>
+  Project Related Section
+</h3><hr><hr>
+<div>
+  <app-new-driver-form></app-new-driver-form>
+</div> -->

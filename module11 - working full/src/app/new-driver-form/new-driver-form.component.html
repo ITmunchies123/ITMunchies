@@ -1,0 +1,44 @@
+<h3>New Driver Form</h3>
+<h5>Thank you for chosing to be a driver for IT Munchies. <br>
+Please fill out the application below to begin the process</h5>
+
+<div>
+
+    <p><u>{{mode}} Driver Inforamtion</u></p>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+        <mat-form-field >
+            <input matInput placeholder="First Name" id="firstname" [(ngModel)]=" firstName" name="firstname" >
+        </mat-form-field>
+              
+        <mat-form-field >
+            <input matInput placeholder="Last Name" id="lastname" [(ngModel)]=" lastName" name="lastname" >
+        </mat-form-field>
+<br>
+        <mat-form-field >
+            <input matInput placeholder="Driver Nickname" id="nickname" [(ngModel)]=" nickname" name="nickname" >
+        </mat-form-field>
+        
+          <mat-form-field >
+            <input matInput placeholder="Service Zip" id="zip" [(ngModel)]=" zip" name="zip" >
+          </mat-form-field>   
+<br>
+<p><u>Car Inforamtion</u></p>
+          <mat-form-field >
+            <input matInput placeholder="Car Brand" id="brand" [(ngModel)]=" brand" name="brand" >
+          </mat-form-field>
+        
+          <mat-form-field >
+            <input matInput placeholder="Car Model" id="model" [(ngModel)]=" model" name="model" >
+          </mat-form-field>
+          
+          <mat-form-field >
+            <input matInput placeholder="Car Color" id="color" [(ngModel)]=" color" name="color" >
+          </mat-form-field>
+    
+      <p>
+        <button type="submit" mat-raised-button>Apply</button>
+      </p>
+    </form>
+    </div>
+    

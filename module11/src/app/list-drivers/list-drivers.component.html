@@ -1,0 +1,15 @@
+<p>list-drivers works!</p>
+
+
+<p><u>Driver Inforamtion</u></p>
+<div>
+        <ul *ngFor ="let d of drivers let i = index">
+          <li> {{d._id}}: {{d.firstName}} {{d.lastName}} {{d.nickname}} {{d.zip}} {{d.brand}} {{d.model}} {{d.color}} (index {{i}}) 
+              <button mat-button color="warn" (click)="onDelete(d._id)">DELETE</button>
+              <button mat-button color="accent" [routerLink]="['/editDriver', d._id]">UPDATE</button>
+            </li>
+        </ul>
+      </div>
+
+
+  

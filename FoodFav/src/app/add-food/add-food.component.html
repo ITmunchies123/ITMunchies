@@ -1,0 +1,21 @@
+<p>add-food works!</p>
+<div>
+<h3>{{mode}} Food Form</h3>
+<form (ngSubmit)="
+onSubmit()
+" #myForm="ngForm">
+    <mat-form-field >
+    <input matInput placeholder="Search" id="search" [(ngModel)]=" 
+search
+" name="search" >
+    </mat-form-field>
+    <mat-form-field >
+    <input matInput placeholder="Save" id="save" [(ngModel)]=" 
+save
+" name="save" >
+    </mat-form-field>
+    <p>
+    <button type="submit" mat-raised-button>Submit</button>
+    </p>
+</form>
+</div>

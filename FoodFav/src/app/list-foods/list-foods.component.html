@@ -1,0 +1,10 @@
+<p>list-foods works!</p>
+<div>
+    <ul *ngFor ="let foo of food let i = index">
+        <li> {{foo.id}}: {{foo.place}} (index 
+    {{i}})
+    <button mat-button color="warn" (click)="onDelete(foo._id)">DELETE</button>
+    <button mat-button color="accent" [routerLink]="['/editFood', foo._id]">UPDATE</button>
+    </li>
+        </ul>
+</div>

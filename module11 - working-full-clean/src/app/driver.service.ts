@@ -11,12 +11,12 @@ export class DriverService {
      constructor(private http:HttpClient) {}
  
     // Uses http.get() to load data 
-    getDriver() {
+getDriver() {
         return this.http.get('http://localhost:8000/driver');
     }
 
     // Uses http.post() to post data 
-   addDriver(firstName: string, lastName: string, nickname: string, zip: string, brand: string, model: string, color: string) {
+addDriver(firstName: string, lastName: string, nickname: string, zip: string, brand: string, model: string, color: string) {
         this.http.post('http://localhost:8000/driver',{ firstName, lastName, nickname, zip, brand, model, color})
       .subscribe((responseData) => {
          console.log(responseData);
@@ -24,8 +24,7 @@ export class DriverService {
        //location.reload();
     }
 
-
-    deleteDriver(driverId: string) {
+deleteDriver(driverId: string) {
         this.http.delete("http://localhost:8000/driver/" + driverId)
           .subscribe(() => {
               console.log('Deleted: ' + driverId);
@@ -33,7 +32,7 @@ export class DriverService {
           location.reload();
       }
     
-      updateDriver( driverId: string,
+updateDriver( driverId: string,
                     firstName: string, 
                     lastName: string, 
                     nickname: string, 
@@ -49,11 +48,8 @@ export class DriverService {
               .subscribe(() => {
                   console.log('Updated: ' + driverId);
               });
-              location.reload();
+              //location.reload();
         }
-    
-
-
 }
 
 

@@ -27,28 +27,10 @@ import { MatMenuModule } from '@angular/material';
 import { MatIconModule } from '@angular/material';
 import { Routes } from '@angular/router';
 import { RouterModule } from '@angular/router';
-//import { ListStudentsComponent } from './list-students/list-students.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ListDriversComponent } from './list-drivers/list-drivers.component';
 
-  
-//added for lab 11 - mimic'd for project
-// const appRoutes: Routes = [ {
-//   path: '',                     //default component to display
-//    component: ListStudentsComponent
-//  },       {
-//    path: 'addStudent',         //when students added 
-//    component: NewStudentFormComponent
-//  },       {
-//    path: 'listStudents',       //when students listed
-//    component: ListStudentsComponent
-//  },       {
-//    path: '**',                 //when path cannot be found
-//    component: NotFoundComponent
-//  }
-// ];
 
-//uncomment this and comment one above for project
 const appRoutes: Routes = [ 
   {
   path: '',                     //default component to display
@@ -63,7 +45,8 @@ const appRoutes: Routes = [
    component: ListDriversComponent
  } ,
         {
-  path: 'editDriver/:_id',         //when driver added 
+
+  path: 'editDriver/:_id/:firstName/:lastName/:nickname/:zip/:brand/:model/:color',         //when driver added 
     component: NewDriverFormComponent
   },         
  {
@@ -78,7 +61,6 @@ const appRoutes: Routes = [
     NewStudentFormComponent,
     NewDriverFormComponent,
     NavigationMenuComponent,
-    //ListStudentsComponent,
     NotFoundComponent,
     ListDriversComponent
   ],
@@ -91,13 +73,12 @@ const appRoutes: Routes = [
     MatInputModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    //added for lab11
     MatMenuModule,
     MatIconModule,
     RouterModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [/*StudentService,*/ DriverService],
+  providers: [DriverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

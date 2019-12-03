@@ -32,31 +32,6 @@ app.use((req, res, next) => {
  });
 
 
-//  app.get('/students', (req, res, next) => {
-//      //call mongoose method find (MongoDB db.Students.find())
-//   Student.find() 
-//   //if data is returned, send data as a response 
-//   .then(data => res.status(200).json(data))
-//   //if error, send internal server error
-//   .catch(err => {
-//   console.log('Error: ${err}');
-//   res.status(500).json(err);
-// });
-// });
-
-//web page port 8000 for DRIVER
-
-
- //commented this out for step 1 page 7
-  //  const students = [ 
-  //    { "id" : "1", "firstName" : "John" , "lastName" : "Dow" }, 
-  //    { "id" : "2", "firstName" : "Ann" , "lastName" : "Smith" }, 
-  //    { "id" : "3", "firstName" : "Joan" , "lastName" : "Doe" }];
- //send the array as the response 
-   // res.json(students);
- 
-
-
 app.get('/driver', (req, res, next) => {
   //call mongoose method find (MongoDB db.Students.find())
 driverSchema.find() 
@@ -67,14 +42,7 @@ driverSchema.find()
 console.log('Error: ${err}');
 res.status(500).json(err);
 })
-})
-
-//:id is a dynamic parameter that will be extracted from the URL
-// app.delete("/students/:id", (req, res, next) => {
-//   Student.deleteOne({ _id: req.params.id }).then(result => {
-//     console.log(result);
-//     res.status(200).json("Deleted!");
-//   });
+});
 
 //:id is a dynamic parameter that will be extracted from the URL
 app.delete("/driver/:id", (req, res, next) => {
@@ -85,37 +53,6 @@ app.delete("/driver/:id", (req, res, next) => {
 });
 
 
-//});
-
-
-//  // serve incoming post requests to /students
-// app.post('/students', (req, res, next) => {
-
-//   //commented this section out and added below to write to DB
-//   // const student = req.body;
-//   // console.log(student.firstName + " " + student.lastName);
-//   // //sent an acknowledgment back to caller 
-//   // res.status(201).json('Post successful');
-
-
-//   //create a new student variable and save request’s fields 
-//   const student = new Student({
-//     firstName: req.body.firstName,
-//     lastName: req.body.lastName
-//   });
-//   //send the document to the database 
-//   student.save()
-//     //in case of success
-//     .then(() => { console.log('Success');})
-//     //if error
-//     .catch(err => {console.log('Error:' + err);});
-
-// });
-
-
- 
-
-//COMMENTED THIS SECTION OUT FOR Lab10 progress. This is request for the driver portion. 
 // // serve incoming post requests to /driver
 app.post('/driver', (req, res, next) => {
           console.log("This is all the request data \n"+
@@ -128,7 +65,7 @@ app.post('/driver', (req, res, next) => {
         req.body.color
         )
           const drivers = new driverSchema({
-            id: Math.floor(Math.random()*999999999),
+            id: Math.floor(Math.random()*99999),
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             nickname:req.body.nickname,
@@ -192,39 +129,6 @@ app.put('/driver/:id', (req, res, next) => {
         
         }
   ); 
-
-
-
-
-//  app.put('/driver/:id',(req,res,next) => {
-//   driverSchema.findOneAndUpdate({_id:req.params.id},
-//     {
-//       $set:{
-//         firstName : req.body.firstName,
-//                 lastName : req.body.lastName,
-//                 nickname: req.body.nickname,
-//                 zip: req.body.zip,
-//                 brand: req.body.brand,
-//                 model: req.body.model,
-//                 color: req.body.color
-//       }
-//     },(err,result) => {
-//       if(err){
-//         console.log(err)
-//       }
-//       else{
-//         console.log(result)
-//       }
-//     })
-// });
-
-
-
-
-
-
-
-
 
 
 //to use this middleware in other parts of the application

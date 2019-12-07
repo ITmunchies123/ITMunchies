@@ -18,10 +18,6 @@ import { AccountsListComponent } from './accounts-list/accounts-list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LogInComponent } from './log-in/log-in.component'
 
-// //import { UserComponent } from './user/user.component';
-// import { UserComponent } from './new-registration-form/new-registration-form.component';
-// import { CustomMaterialModule } from './core/material.modules';
-
 // Lines 21-34 for LAB 11
 const appRoutes: Routes = [ {
   path: '',         //when students added
@@ -33,7 +29,7 @@ const appRoutes: Routes = [ {
    path: 'addAccounts',         //when students added
    component: NewRegistrationFormComponent
  },       {
-   path: 'editAccount/:_id',         //when editing accounts
+   path: 'editAccount/:_id/:username/:password/:fname/:lname/:address/:city/:state/:zip/:phone/:email',         //when editing accounts
    component: NewRegistrationFormComponent
  },       {
    path: 'listAccounts',       //when students listed
@@ -71,10 +67,6 @@ const appRoutes: Routes = [ {
     MatIconModule,
     RouterModule,
     RouterModule.forRoot(appRoutes),
-    // CustomMaterialModule,
-    // UserComponent,
-    // CustomMaterialModule
-
 
   ],
   providers: [accountcreation],

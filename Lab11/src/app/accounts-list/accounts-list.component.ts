@@ -19,7 +19,9 @@ export class AccountsListComponent implements OnInit {
   getaccountcreation() {
    this._myService.getaccountcreation().subscribe(
   //read data and assign to public variable students
-      data => { this.acccreation = data},
+      data => { this.acccreation = data
+      console.log(this.acccreation)
+      },
       err => console.error(err),
       () => console.log('finished loading')
     );

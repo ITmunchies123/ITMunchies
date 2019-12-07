@@ -25,7 +25,7 @@ const appRoutes: Routes = [{
   
   }, 
   {
-path: 'editFood/:id',
+path: 'editFood/:_id/:id/:place',
 component: AddFoodComponent
   },
   {

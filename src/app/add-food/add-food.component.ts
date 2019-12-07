@@ -17,6 +17,8 @@ export class AddFoodComponent implements OnInit {
 
   private mode = 'add'
   private id:string;
+  private place:string
+  private otherID:string
 
   constructor(private _myService:FoodService,private router:Router,public route:ActivatedRoute) { }
 
@@ -36,11 +38,15 @@ export class AddFoodComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe((paramMap: ParamMap ) => {
 
-      if (paramMap.has('id'))
+      if (paramMap.has('_id'))
       
-      { this.mode = 'edit'; /*request had a parameter _id */
+      {this.mode = 'edit'; /*request had a parameter _id */
       
-      this.id = paramMap.get('id');}
+      this.id = paramMap.get('_id');
+      this.otherID = paramMap.get('id')
+      this.place = paramMap.get('place')
+    
+    }
       
       else {this.mode = 'add';
       

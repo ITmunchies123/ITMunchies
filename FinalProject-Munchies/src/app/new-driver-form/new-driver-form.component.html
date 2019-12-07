@@ -8,33 +8,35 @@ Please fill out the application below to begin the process, or edit your informa
     <form (ngSubmit)="onSubmit()" #myForm="ngForm" ng-switch="mode">
         <div ng-switch-when="edit">
 
-      
+      First Name:
         <mat-form-field >
             <input matInput placeholder="{{fname}}" id="firstname" [(ngModel)]=" firstName" name="firstname" >
         </mat-form-field>
 
-              
+              Last Name:
         <mat-form-field >
             <input matInput placeholder="{{lname}}" id="lastname" [(ngModel)]=" lastName" name="lastname" >
         </mat-form-field>
 <br>
+Driver Nickname:
         <mat-form-field >
             <input matInput placeholder="{{nckname}}" id="nickname" [(ngModel)]=" nickname" name="nickname" >
         </mat-form-field>
-        
+        Service Zip:
           <mat-form-field >
             <input matInput placeholder="{{zp}}" id="zip" [(ngModel)]=" zip" name="zip" >
           </mat-form-field>   
 <br>
 <p><u>Car Inforamtion</u></p>
+Car Brand:
           <mat-form-field >
             <input matInput placeholder="{{brnd}}" id="brand" [(ngModel)]=" brand" name="brand" >
           </mat-form-field>
-        
+        Car Model:
           <mat-form-field >
             <input matInput placeholder="{{modl}}" id="model" [(ngModel)]=" model" name="model" >
           </mat-form-field>
-          
+          Car Color:
           <mat-form-field >
             <input matInput placeholder="{{colr}}" id="color" [(ngModel)]=" color" name="color" >
           </mat-form-field>
